@@ -156,4 +156,5 @@ function toggleFaq(el){el.parentElement.classList.toggle('open')}
 document.getElementById('salaryInput').addEventListener('input',function(){fmtIn(this);calc()});document.getElementById('taxFree').addEventListener('input',function(){fmtIn(this);calc()});document.getElementById('dependents').addEventListener('change',calc);document.getElementById('children').addEventListener('change',calc);
 const params=new URLSearchParams(window.location.search);if(params.get('salary'))document.getElementById('salaryInput').value=parseInt(params.get('salary')).toLocaleString('ko-KR');
 calc();
-</script></body></html>
+</script><script src="https://jwaytools.com/engagement.js" defer></script>
+</body></html>
