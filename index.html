@@ -42,7 +42,7 @@ select.field-input{cursor:pointer;font-family:'Noto Sans KR',sans-serif}
 .nav-toggle{display:none;background:none;border:1.5px solid var(--border);border-radius:8px;padding:6px 10px;font-size:20px;cursor:pointer;color:var(--text-secondary);line-height:1}
 @media(max-width:640px){.nav-toggle{display:block}.nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--surface);border-bottom:1.5px solid var(--border);padding:12px 20px;flex-direction:column;gap:10px;box-shadow:0 8px 24px rgba(0,0,0,.08);z-index:99}.nav-links.open{display:flex}.nav{position:relative}}
 </style>
-<meta property="og:image" content="https://jwaytools.com/salary-calculator/og-image.png"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453815259196400" crossorigin="anonymous"></script>
+<meta property="og:image" content="https://jwaytools.com/salary-calculator/og-image.png">
 </head><body>
 
 <nav class="nav"><div class="nav-inner"><a href="https://jwaytools.com/" class="nav-logo">J<span>WAY</span></a><button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button><div class="nav-links"><a href="https://jwaytools.com/char-counter/">글자수</a><a href="https://jwaytools.com/date-calculator/">날짜</a><a href="https://jwaytools.com/percent-calculator/">퍼센트</a><a href="https://jwaytools.com/salary-calculator/">연봉</a><a href="https://jwaytools.com/bmi-calculator/">BMI</a><a href="https://jwaytools.com/exchange-rate/">환율</a><a href="https://jwaytools.com/unit-converter/">단위</a><a href="https://jwaytools.com/timer/">타이머</a><a href="https://jwaytools.com/qr-generator/">QR</a><a href="https://jwaytools.com/color-converter/">색상</a><a href="https://jwaytools.com/random-picker/">랜덤</a><a href="https://jwaytools.com/loan-calculator/">대출</a><a href="https://jwaytools.com/age-calculator/">만나이</a><a href="https://jwaytools.com/savings-calculator/">예적금</a><a href="https://jwaytools.com/income-tax-calculator/">소득세</a></div></div></nav>
@@ -120,6 +120,21 @@ select.field-input{cursor:pointer;font-family:'Noto Sans KR',sans-serif}
 <h2>연말정산과 실수령액의 관계</h2>
 <p>매월 급여에서 공제되는 소득세는 "간이세액표" 기준의 추정치입니다. 실제 소득세는 연말정산을 통해 확정되므로, 1년간 과다 납부한 세금은 환급(13월의 월급)받고 부족하면 추가 납부하게 됩니다. 연말정산에서 공제를 많이 받을 수 있는 항목으로는 의료비, 교육비, 기부금, 주택청약, 신용카드 사용액 등이 있습니다.</p>
 <p>따라서 이 계산기의 월 실수령액은 연말정산 전 기준이며, 연말정산 결과에 따라 연간 실수령 총액은 달라질 수 있습니다. 연말정산으로 평균 50~100만원 정도를 환급받는 직장인이 많으므로, 월 실수령액보다 연간 실수령 총액이 다소 높아지는 것이 일반적입니다.</p>
+
+<h2>계산 기준과 확인 출처</h2>
+<p>이 페이지는 2025년 기준 4대보험 요율, 국민연금 기준소득월액 상·하한, 건강보험 및 장기요양보험 요율, 고용보험 근로자 부담분, 국세청 근로소득 간이세액표 구조를 바탕으로 실수령액을 추정합니다. 세율과 보험료율은 매년 변경될 수 있으므로 실제 급여 적용 전에는 공식 기관 자료를 함께 확인하는 것이 안전합니다.</p>
+<p>확인에 참고할 공식 자료는 <a href="https://www.nts.go.kr/" target="_blank" rel="noopener">국세청</a>의 근로소득 간이세액표와 연말정산 안내, <a href="https://www.4insure.or.kr/" target="_blank" rel="noopener">4대사회보험 정보연계센터</a>의 사회보험 안내, <a href="https://www.nhis.or.kr/" target="_blank" rel="noopener">국민건강보험공단</a>의 보험료율 공지입니다. 회사별 급여 규정, 상여금 지급 방식, 비과세 처리 여부는 공식 요율만으로 확인되지 않으므로 급여명세서와 사내 인사 규정을 함께 보아야 합니다.</p>
+
+<h2>실제 계산 예시 3가지</h2>
+<h3>예시 1: 연봉 3,600만원, 비과세 식대 20만원</h3>
+<p>세전 월급은 300만원이지만 식대 20만원이 비과세로 처리되면 보험료와 세금 계산의 기준이 되는 과세 급여가 줄어듭니다. 이 경우 같은 연봉이라도 비과세 항목이 없는 사람보다 월 실수령액이 조금 높게 나옵니다.</p>
+<h3>예시 2: 연봉 5,000만원, 부양가족 본인 1명</h3>
+<p>연봉 5,000만원 구간은 4대보험과 소득세가 모두 체감되는 구간입니다. 연봉이 4,000만원에서 5,000만원으로 오르면 세전 월급은 약 83만원 증가하지만, 실제 통장에 늘어나는 금액은 공제 후 금액이므로 그보다 작습니다.</p>
+<h3>예시 3: 연봉 8,000만원 이상</h3>
+<p>고연봉 구간에서는 국민연금 상한 때문에 국민연금 증가폭은 제한되지만 건강보험료와 소득세 부담은 계속 커집니다. 이 구간에서는 실수령액뿐 아니라 성과급 지급 시점, 연말정산 추가 납부 가능성, 퇴직금 포함 여부까지 함께 보는 것이 좋습니다.</p>
+
+<h2>사용 전 주의사항</h2>
+<p>이 계산기는 이직·연봉 협상·가계 예산을 위한 참고용 도구입니다. 실제 급여는 회사의 비과세 항목, 상여금 지급 방식, 스톡옵션·성과급·수당 처리, 전년도 연말정산 결과, 중도 입사 여부에 따라 달라질 수 있습니다. 세무 판단이나 계약 체결 전에는 회사 인사팀, 세무 전문가, 국세청 자료를 통해 최종 확인하세요.</p>
 
 <h2>이 도구의 주요 기능</h2>
 <p>연봉을 입력하면 4대보험과 세금이 항목별로 상세하게 표시됩니다. 부양가족 수와 비과세액을 설정하여 본인 상황에 맞는 정확한 실수령액을 계산할 수 있습니다. 연봉 대비 실수령액 비율을 시각적 차트로 보여주어 공제 구조를 한눈에 파악할 수 있습니다. 연봉별 비교표로 다른 연봉 구간의 실수령액도 함께 확인할 수 있습니다.</p>
